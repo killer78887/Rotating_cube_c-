@@ -117,22 +117,6 @@ void render(int buffer_size, float *zBuffer, char *output, int height, int width
         vertices2[i][1] = ((vertices3[i][y]+centerY)*k)/(vertices3[i][z]+centerZ);
         output[static_cast<int>((static_cast<int>(vertices2[i][1]))*width+vertices2[i][0])] = '.';
     }
-    /*   //messing around
-    int radius1 = 10;
-    int radius2 = radius1/1.7;
-    float x1 = radius1-a;
-    float y1 = (sqrt(pow(radius1,2)-pow(x1,2))/(radius1/radius2)); //ellipse
-    //std::cout << y1;
-    int tempx = x1;
-    int tempy = y1;
-    drawLine(40,9,x1+40,y1+9,output,width);
-    drawLine(40,9,tempx+40,-tempy+9,output,width);
-    if (x1<=-10){
-        a=-0.1;
-        std::fill_n(output,height*width,'.');
-        
-    }
-    */
     
     //god this is a mess (drawing lines)
     drawLine(vertices2[0][0],vertices2[0][1],vertices2[1][0],vertices2[1][1],output,width);
